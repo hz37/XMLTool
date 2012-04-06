@@ -8,8 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@class XmlData;
 
-@property (assign) IBOutlet NSWindow *window;
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    XmlData* xmlData;
+}
+
+@property (weak) IBOutlet NSButton *createXmlButton;
+@property (weak) IBOutlet NSButton *c0pyButton;
+
+- (IBAction)addFile:(id)sender;
+- (IBAction)copyFileName:(id)sender;
+- (IBAction)createXml:(id)sender;
+- (IBAction)today:(id)sender;
 
 @end

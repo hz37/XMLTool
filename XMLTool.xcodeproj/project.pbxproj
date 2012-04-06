@@ -13,6 +13,8 @@
 		9E1737631514A8180024AEB5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9E1737611514A8180024AEB5 /* Credits.rtf */; };
 		9E1737661514A8180024AEB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1737651514A8180024AEB5 /* AppDelegate.m */; };
 		9E1737691514A8180024AEB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E1737671514A8180024AEB5 /* MainMenu.xib */; };
+		9E6A315315166EE900E02DF0 /* XmlData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6A315215166EE900E02DF0 /* XmlData.m */; };
+		9EA4CCD71519FBAF00F55541 /* xmltool.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9EA4CCD61519FBAF00F55541 /* xmltool.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,17 @@
 		9E1737551514A8180024AEB5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9E1737561514A8180024AEB5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9E1737571514A8180024AEB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9E17375A1514A8180024AEB5 /* XMLTool-Info.plist */ = {isa = PBXFileReference; path = "XMLTool-Info.plist"; sourceTree = "<group>"; };
+		9E17375A1514A8180024AEB5 /* XMLTool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XMLTool-Info.plist"; sourceTree = "<group>"; };
 		9E17375C1514A8180024AEB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E17375E1514A8180024AEB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9E1737601514A8180024AEB5 /* XMLTool-Prefix.pch */ = {isa = PBXFileReference; path = "XMLTool-Prefix.pch"; sourceTree = "<group>"; };
+		9E1737601514A8180024AEB5 /* XMLTool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XMLTool-Prefix.pch"; sourceTree = "<group>"; };
 		9E1737621514A8180024AEB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9E1737641514A8180024AEB5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E1737641514A8180024AEB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E1737651514A8180024AEB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9E1737681514A8180024AEB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9E6A315115166EE900E02DF0 /* XmlData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlData.h; sourceTree = "<group>"; };
+		9E6A315215166EE900E02DF0 /* XmlData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlData.m; sourceTree = "<group>"; };
+		9EA4CCD61519FBAF00F55541 /* xmltool.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = xmltool.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 		9E1737431514A8180024AEB5 = {
 			isa = PBXGroup;
 			children = (
+				9EA4CCD61519FBAF00F55541 /* xmltool.icns */,
 				9E1737581514A8180024AEB5 /* XMLTool */,
 				9E1737511514A8180024AEB5 /* Frameworks */,
 				9E17374F1514A8180024AEB5 /* Products */,
@@ -86,6 +92,8 @@
 				9E1737651514A8180024AEB5 /* AppDelegate.m */,
 				9E1737671514A8180024AEB5 /* MainMenu.xib */,
 				9E1737591514A8180024AEB5 /* Supporting Files */,
+				9E6A315115166EE900E02DF0 /* XmlData.h */,
+				9E6A315215166EE900E02DF0 /* XmlData.m */,
 			);
 			path = XMLTool;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 				9E17375D1514A8180024AEB5 /* InfoPlist.strings in Resources */,
 				9E1737631514A8180024AEB5 /* Credits.rtf in Resources */,
 				9E1737691514A8180024AEB5 /* MainMenu.xib in Resources */,
+				9EA4CCD71519FBAF00F55541 /* xmltool.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 			files = (
 				9E17375F1514A8180024AEB5 /* main.m in Sources */,
 				9E1737661514A8180024AEB5 /* AppDelegate.m in Sources */,
+				9E6A315315166EE900E02DF0 /* XmlData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +299,7 @@
 				9E17376E1514A8180024AEB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
