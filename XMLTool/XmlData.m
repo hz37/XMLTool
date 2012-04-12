@@ -27,13 +27,17 @@
 @synthesize file5;
 @synthesize comments;
 @synthesize date;
+@synthesize emailConfirmation;
 @synthesize isHD;
+@synthesize isMultiChannel;
+@synthesize isLowLoudnessLevel;
 @synthesize fileName;
 
 // Keys for user settings.
 
 NSString* const HZ37_Agency = @"Agency";
 NSString* const HZ37_ProductionCompany = @"Production company";
+NSString* const HZ37_EmailConfirmation = @"Email confirmation";
 
 // This is the PAL version.
 
@@ -76,6 +80,7 @@ NSInteger const HZ37_frameRate = 25; // fps
 
     [self setValue:[userDefaults stringForKey:HZ37_Agency] forKey:@"agency"];
     [self setValue:[userDefaults stringForKey:HZ37_ProductionCompany] forKey:@"productionCompany"];
+    [self setValue:[userDefaults stringForKey:HZ37_EmailConfirmation] forKey:@"emailConfirmation"];
     
     [self setValue:@"" forKey:@"title"];
     [self setValue:@"" forKey:@"product"];
@@ -92,6 +97,8 @@ NSInteger const HZ37_frameRate = 25; // fps
     [self addObserver:self forKeyPath:@"length" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"date" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"isHD" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"isMultiChannel" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"isLowLoudnessLevel" options:NSKeyValueObservingOptionNew context:nil];
 
     [self updateFileName];
 
@@ -111,14 +118,16 @@ NSInteger const HZ37_frameRate = 25; // fps
     [self updateFileName];
 }
 
+
 // Save user preferences/settings to disk.
 
 - (void) saveUserSettings
 {
-    NSUserDefaults* userDefaults  = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     
     [userDefaults setValue:agency forKey:HZ37_Agency];
-    [userDefaults setValue:productionCompany forKey:HZ37_ProductionCompany ];
+    [userDefaults setValue:productionCompany forKey:HZ37_ProductionCompany];
+    [userDefaults setValue:emailConfirmation forKey:HZ37_EmailConfirmation];
 }
 
 
@@ -231,12 +240,18 @@ NSInteger const HZ37_frameRate = 25; // fps
     element = [[NSXMLElement alloc] initWithName:@"COMMENTS" stringValue:[self valueForKey:@"comments"]];
     [root addChild:element];
     
-    if (isHD) 
-    {
-        element = [[NSXMLElement alloc] initWithName:@"HD" stringValue:@"TRUE"];
-        [root addChild:element];
-    }
+    element = [[NSXMLElement alloc] initWithName:@"EMAIL_CONFIRMATION" stringValue:[self valueForKey:@"emailConfirmation"]];
+    [root addChild:element];
+    
+    element = [[NSXMLElement alloc] initWithName:@"HD" stringValue:isHD ? @"TRUE" : @"FALSE"];
+    [root addChild:element];
          
+    element = [[NSXMLElement alloc] initWithName:@"MULTI_CHANNEL_AUDIO" stringValue:isMultiChannel ? @"TRUE" : @"FALSE"];
+    [root addChild:element];
+
+    element = [[NSXMLElement alloc] initWithName:@"LOW_LOUDNESS_LEVEL" stringValue:isLowLoudnessLevel ? @"TRUE" : @"FALSE"];
+    [root addChild:element];
+
     // Write it to disk.
     
     NSData* xml = [xmlDoc XMLDataWithOptions:NSXMLNodePrettyPrint];

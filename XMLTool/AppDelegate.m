@@ -13,9 +13,6 @@
 @synthesize createXmlButton;
 @synthesize c0pyButton;
 
-
-
-
 - 	(void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 }
@@ -90,7 +87,6 @@
     {
         [xmlData writeXmlFile:[savePanel URL]];
     }
-
 }
 
 
@@ -105,13 +101,12 @@
         
         [xmlData setValue:[[openPanel URL] lastPathComponent] forKey:fieldName];
     }
-    
 }
+
 
 - (IBAction)today:(id)sender 
 {
     [xmlData today];
 }
-
 
 @end

@@ -28,7 +28,10 @@
     NSMutableString* file5;
     NSMutableString* comments;
     NSDate* date; 
+    NSMutableString* emailConfirmation;
     BOOL isHD;
+    BOOL isMultiChannel;
+    BOOL isLowLoudnessLevel;
     NSMutableString* fileName;
 }
 
@@ -49,7 +52,10 @@
 @property (readwrite, copy) NSMutableString* file5;
 @property (readwrite, copy) NSMutableString* comments;
 @property (readwrite, copy) NSDate* date;
+@property (readwrite, copy) NSMutableString* emailConfirmation;
 @property (readwrite) BOOL isHD;
+@property (readwrite) BOOL isMultiChannel;
+@property (readwrite) BOOL isLowLoudnessLevel;
 @property (readwrite, copy) NSMutableString* fileName;
 
 - (NSString*) fileNameSafe: (NSString*) s;
