@@ -136,7 +136,7 @@
 		9E1737451514A8180024AEB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = HZ37Land;
 			};
 			buildConfigurationList = 9E1737481514A8180024AEB5 /* Build configuration list for PBXProject "XMLTool" */;
@@ -261,6 +261,7 @@
 		9E17376D1514A8180024AEB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLTool/XMLTool-Prefix.pch";
 				INFOPLIST_FILE = "XMLTool/XMLTool-Info.plist";
@@ -272,6 +273,7 @@
 		9E17376E1514A8180024AEB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLTool/XMLTool-Prefix.pch";
 				INFOPLIST_FILE = "XMLTool/XMLTool-Info.plist";
